@@ -21,7 +21,7 @@ An advanced command-line security tool that automatically performs reconnaissanc
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/AIBountyHunter.git
+   git clone https://github.com/minalhasan/AIBountyHunter.git
    cd AIBountyHunter
    ```
 
@@ -123,3 +123,4 @@ Contributions are welcome! Please open issues or pull requests.
 ## License
 
 MIT License
+
