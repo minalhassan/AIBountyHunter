@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AIBountyHunter Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Vulnerability Report</h1>
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>URL</th>
+            <th>Parameter</th>
+            <th>Payload</th>
+            <th>Response Code</th>
+            <th>Evidence</th>
+        </tr>
+        <tr>
+            <td>xss</td>
+            <td>http://example.com/search?q=%3Cscript%3Ealert(1)%3C/script%3E</td>
+            <td>q</td>
+            <td>&lt;script&gt;alert(1)&lt;/script&gt;</td>
+            <td>200</td>
+            <td>Search results for &lt;script&gt;alert(1)&lt;/script&gt;</td>
+        </tr>
+        <tr>
+            <td>sqli</td>
+            <td>http://example.com/user?id=1%27%20OR%20%271%27%3D%271</td>
+            <td>id</td>
+            <td>1' OR '1'='1</td>
+            <td>500</td>
+            <td>SQL syntax error</td>
+        </tr>
+    </table>
+</body>
+</html>
